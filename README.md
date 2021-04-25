@@ -11,7 +11,7 @@ The manager of the Pewlett-Hackard Corporation has requested we analyze their em
 # Results
 The following schema demonstrates the relationships between the databases we were provided:<br>
 
-![Schema](Results/schema.png)
+![Schema](Results/schema.png)<br>
 
 - In order to find the number of employees who would be retiring soon by title, we joined columns from the employees and titles tables into a new table, which we labeled retirement_titles. We filtered this for employees born between 1952-1955 using the following code:<br>
 
@@ -25,7 +25,7 @@ ORDER BY emp_no ASC;<br>
 
 This gave us a table in which some employees who have held multiple titles appear more than once:<br>
 
-![Schema](Results/retirement_titles.png)
+![Schema](Results/retirement_titles.png)<br>
 
 - To rectify the problem of having employees appearing multiple times we used the following DISTINCT ON command to remove the duplicates and created another table which we labeled unique_titles:<br>
 
@@ -39,7 +39,7 @@ ORDER BY emp_no, to_date DESC;<br>
 
 This produced a table without duplicates:<br>
 
-![Schema](Results/unique_titles.png)
+![Schema](Results/unique_titles.png)<br>
 
 - We then used the COUNT function to find the total number of soon-to-retire employees by title:<br>
 
@@ -49,7 +49,7 @@ FROM unique_titles<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/retiring_titles.png)
+![Schema](Results/retiring_titles.png)<br>
 
 - In order to determine the number of employees eligible for the mentorship program we joined the employees, titles, and dept_employees tables, then filtered for employees who were born in 1965 and who were still currently employed (signified by the company under the arbitrary to_date of '9999-01-01'). Finally, we eliminated duplicate records by using the DISTINCT ON command:<br>
 
@@ -67,12 +67,12 @@ ORDER BY emp_no ASC;<br>
 
 This produced a table of employees eligible for the program:<br>
 
-![Schema](Results/mentorship_eligibility.png)
+![Schema](Results/mentorship_eligibility.png)<br>
 
 # Summary
 - How many roles will need to be filled as the "silver tsunami" begins to make an impact?<br>
 As we can see in the retiring_titles table, the following numbers of positions will need to be filled:<br>
-![Schema](Results/retiring_titles.png)
+![Schema](Results/retiring_titles.png)<br>
 We can anticipate that we will need to fill the roles of 29,414 Senior Engineers, 28,255 Senior Staff, 14,222 Engineers, 12,242 Staff, 4502 Technique Leaders, 1761 Assistant Engineers, and 2 Managers. To better understand what this means for the company we can compare the numbers of employees retiring to the numbers of the total workforce. We can find the numbers of titles of all current employees regardless of age using the following code:<br>
 
 SELECT COUNT(title), title<br>
@@ -83,7 +83,7 @@ ON employees.emp_no = titles.emp_no<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/total_titles.png)
+![Schema](Results/total_titles.png)<br>
 
 From this we can see that the number of employees retiring is a significant portion of the total employee population for each job title.<br>
 
@@ -96,7 +96,7 @@ FROM mentorship_eligibility<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/mentorship_titles.png)
+![Schema](Results/mentorship_titles.png)<br>
 
 Compared to the number of employees who will be retiring soon, the number of employees eligible for the mentorship program is small, in the hundreds rather than the thousands. There are certainly enough employees of the older generation to mentor the next generation of leaders. <br>
 
