@@ -28,7 +28,7 @@ ORDER BY emp_no ASC;<br>
 This gave us a table in which some employees who have held multiple titles appear more than once:<br>
 
 <p align ="center">
-<img src="Results/retirement_titles.png" alt="retirement_titles" width="600"/><br>
+<img src="Results/retirement_titles.png" alt="retirement_titles" height="400"/><br>
 </p>
 
 - To rectify the problem of having employees appearing multiple times we used the following DISTINCT ON command to remove the duplicates and created another table which we labeled unique_titles:<br>
@@ -44,7 +44,7 @@ ORDER BY emp_no, to_date DESC;<br>
 This produced a table without duplicates:<br>
 
 <p align ="center">
-<img src="Results/unique_titles.png" alt="unique_titles" width="600"/><br>
+<img src="Results/unique_titles.png" alt="unique_titles" height="400"/><br>
 </p>
 
 - We then used the COUNT function to find the total number of soon-to-retire employees by title:<br>
@@ -76,7 +76,7 @@ ORDER BY emp_no ASC;<br>
 This produced a table of employees eligible for the program:<br>
 
 <p align ="center">
-<img src="Results/mentorship_eligibility.png" alt="mentorship_eligibility" width="600"/><br>
+<img src="Results/mentorship_eligibility.png" alt="mentorship_eligibility" height="400"/><br>
 </p>
 
 # Summary
