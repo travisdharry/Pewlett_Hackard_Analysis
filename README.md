@@ -11,7 +11,9 @@ The manager of the Pewlett-Hackard Corporation has requested we analyze their em
 # Results
 The following schema demonstrates the relationships between the databases we were provided:<br>
 
-<img src="Results/schema.png" alt="Schema" align = "center" width="400"/><br>
+<p align ="center"
+<img src="Results/schema.png" alt="Schema" width="400"/><br>
+</p>
 
 - In order to find the number of employees who would be retiring soon by title, we joined columns from the employees and titles tables into a new table, which we labeled retirement_titles. We filtered this for employees born between 1952-1955 using the following code:<br>
 
