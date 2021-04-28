@@ -109,7 +109,7 @@ ON employees.emp_no = titles.emp_no<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 <p align ="center">
-<img src="Results/code5.png" alt="code5" height="200"/><br>
+<img src="Results/code7.png" alt="code7" height="200"/><br>
 </p>
 
 <p align ="center">
