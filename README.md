@@ -27,7 +27,9 @@ ORDER BY emp_no ASC;<br>
 
 This gave us a table in which some employees who have held multiple titles appear more than once:<br>
 
-![Schema](Results/retirement_titles.png)<br>
+<p align ="center">
+<img src="Results/retirement_titles.png" alt="retirement_titles" width="600"/><br>
+</p>
 
 - To rectify the problem of having employees appearing multiple times we used the following DISTINCT ON command to remove the duplicates and created another table which we labeled unique_titles:<br>
 
@@ -41,7 +43,9 @@ ORDER BY emp_no, to_date DESC;<br>
 
 This produced a table without duplicates:<br>
 
-![Schema](Results/unique_titles.png)<br>
+<p align ="center">
+<img src="Results/unique_titles.png" alt="unique_titles" width="600"/><br>
+</p>
 
 - We then used the COUNT function to find the total number of soon-to-retire employees by title:<br>
 
@@ -51,7 +55,9 @@ FROM unique_titles<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/retiring_titles.png)<br>
+<p align ="center">
+<img src="Results/retiring_titles.png" alt="retiring_titles" width="600"/><br>
+</p>
 
 - In order to determine the number of employees eligible for the mentorship program we joined the employees, titles, and dept_employees tables, then filtered for employees who were born in 1965 and who were still currently employed (signified by the company under the arbitrary to_date of '9999-01-01'). Finally, we eliminated duplicate records by using the DISTINCT ON command:<br>
 
@@ -69,7 +75,9 @@ ORDER BY emp_no ASC;<br>
 
 This produced a table of employees eligible for the program:<br>
 
-![Schema](Results/mentorship_eligibility.png)<br>
+<p align ="center">
+<img src="Results/mentorship_eligibility.png" alt="mentorship_eligibility" width="600"/><br>
+</p>
 
 # Summary
 - How many roles will need to be filled as the "silver tsunami" begins to make an impact?<br>
@@ -85,7 +93,9 @@ ON employees.emp_no = titles.emp_no<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/total_titles.png)<br>
+<p align ="center">
+<img src="Results/total_titles.png" alt="total_titles" width="600"/><br>
+</p>
 
 From this we can see that the number of employees retiring is a significant portion of the total employee population for each job title.<br>
 
@@ -98,7 +108,9 @@ FROM mentorship_eligibility<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
 
-![Schema](Results/mentorship_titles.png)<br>
+<p align ="center">
+<img src="Results/mentorship_titles.png" alt="mentorship_titles" width="600"/><br>
+</p>
 
 Compared to the number of employees who will be retiring soon, the number of employees eligible for the mentorship program is small, in the hundreds rather than the thousands. There are certainly enough employees of the older generation to mentor the next generation of leaders. <br>
 
