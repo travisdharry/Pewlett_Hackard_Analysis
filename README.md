@@ -11,7 +11,7 @@ The manager of the Pewlett-Hackard Corporation has requested we analyze their em
 # Results
 The following schema demonstrates the relationships between the databases we were provided:<br>
 
-<p align ="center"
+<p align ="center">
 <img src="Results/schema.png" alt="Schema" width="400"/><br>
 </p>
 
