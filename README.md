@@ -56,7 +56,7 @@ GROUP BY title<br>
 ORDER BY count DESC;<br>
 
 <p align ="center">
-<img src="Results/retiring_titles.png" alt="retiring_titles" width="600"/><br>
+<img src="Results/retiring_titles.png" alt="retiring_titles" width="300"/><br>
 </p>
 
 - In order to determine the number of employees eligible for the mentorship program we joined the employees, titles, and dept_employees tables, then filtered for employees who were born in 1965 and who were still currently employed (signified by the company under the arbitrary to_date of '9999-01-01'). Finally, we eliminated duplicate records by using the DISTINCT ON command:<br>
@@ -82,7 +82,11 @@ This produced a table of employees eligible for the program:<br>
 # Summary
 - How many roles will need to be filled as the "silver tsunami" begins to make an impact?<br>
 As we can see in the retiring_titles table, the following numbers of positions will need to be filled:<br>
-![Schema](Results/retiring_titles.png)<br>
+
+<p align ="center">
+<img src="Results/retiring_titles.png" alt="retiring_titles" width="300"/><br>
+</p>
+
 We can anticipate that we will need to fill the roles of 29,414 Senior Engineers, 28,255 Senior Staff, 14,222 Engineers, 12,242 Staff, 4502 Technique Leaders, 1761 Assistant Engineers, and 2 Managers. To better understand what this means for the company we can compare the numbers of employees retiring to the numbers of the total workforce. We can find the numbers of titles of all current employees regardless of age using the following code:<br>
 
 SELECT COUNT(title), title<br>
@@ -94,7 +98,7 @@ GROUP BY title<br>
 ORDER BY count DESC;<br>
 
 <p align ="center">
-<img src="Results/total_titles.png" alt="total_titles" width="600"/><br>
+<img src="Results/total_titles.png" alt="total_titles" width="300"/><br>
 </p>
 
 From this we can see that the number of employees retiring is a significant portion of the total employee population for each job title.<br>
@@ -109,7 +113,7 @@ GROUP BY title<br>
 ORDER BY count DESC;<br>
 
 <p align ="center">
-<img src="Results/mentorship_titles.png" alt="mentorship_titles" width="600"/><br>
+<img src="Results/mentorship_titles.png" alt="mentorship_titles" width="300"/><br>
 </p>
 
 Compared to the number of employees who will be retiring soon, the number of employees eligible for the mentorship program is small, in the hundreds rather than the thousands. There are certainly enough employees of the older generation to mentor the next generation of leaders. <br>
