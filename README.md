@@ -17,7 +17,7 @@ The following schema demonstrates the relationships between the databases we wer
 
 - In order to find the number of employees who would be retiring soon by title, we joined columns from the employees and titles tables into a new table, which we labeled retirement_titles. We filtered this for employees born between 1952-1955 using the following code:<br>
 
-<img src="Results/code1.png" alt="code1" height="200"/><br>
+<img src="Results/code1.png" alt="code1" height="120"/><br>
 
 This gave us a table in which some employees who have held multiple titles appear more than once:<br>
 
@@ -27,7 +27,7 @@ This gave us a table in which some employees who have held multiple titles appea
 
 - To rectify the problem of having employees appearing multiple times we used the following DISTINCT ON command to remove the duplicates and created another table which we labeled unique_titles:<br>
 
-<img src="Results/code2.png" alt="code2" height="200"/><br>
+<img src="Results/code2.png" alt="code2" height="140"/><br>
 
 This produced a table without duplicates:<br>
 
@@ -37,7 +37,7 @@ This produced a table without duplicates:<br>
 
 - We then used the COUNT function to find the total number of soon-to-retire employees by title:<br>
 
-<img src="Results/code3.png" alt="code3" height="200"/><br>
+<img src="Results/code3.png" alt="code3" height="100"/><br>
 
 <p align ="center">
 <img src="Results/retiring_titles.png" alt="retiring_titles" width="300"/><br>
@@ -45,7 +45,7 @@ This produced a table without duplicates:<br>
 
 - In order to determine the number of employees eligible for the mentorship program we joined the employees, titles, and dept_employees tables, then filtered for employees who were born in 1965 and who were still currently employed (signified by the company under the arbitrary to_date of '9999-01-01'). Finally, we eliminated duplicate records by using the DISTINCT ON command:<br>
 
-<img src="Results/code4.png" alt="code4" height="200"/><br>
+<img src="Results/code4.png" alt="code4" height="220"/><br>
 
 This produced a table of employees eligible for the program:<br>
 
@@ -63,7 +63,7 @@ As we can see in the retiring_titles table, the following numbers of positions w
 
 We can anticipate that we will need to fill the roles of 29,414 Senior Engineers, 28,255 Senior Staff, 14,222 Engineers, 12,242 Staff, 4502 Technique Leaders, 1761 Assistant Engineers, and 2 Managers. To better understand what this means for the company we can compare the numbers of employees retiring to the numbers of the total workforce. We can find the numbers of titles of all current employees regardless of age using the following code:<br>
 
-<img src="Results/code7.png" alt="code7" height="200"/><br>
+<img src="Results/code7.png" alt="code7" height="140"/><br>
 
 <p align ="center">
 <img src="Results/total_titles.png" alt="total_titles" width="300"/><br>
@@ -74,7 +74,7 @@ From this we can see that the number of employees retiring is a significant port
 - Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 In order to answer this question, we first need to determine the counts of mentorship-eligible employees by title. We can do this using the code:<br>
 
-<img src="Results/code6.png" alt="code6" height="200"/><br>
+<img src="Results/code6.png" alt="code6" height="100"/><br>
 
 <p align ="center">
 <img src="Results/mentorship_titles.png" alt="mentorship_titles" width="300"/><br>
