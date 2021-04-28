@@ -24,6 +24,9 @@ LEFT OUTER JOIN titles<br>
 ON employees.emp_no = titles.emp_no<br>
 WHERE (employees.birth_date BETWEEN '1952-01-01' AND '1955-12-31')<br>
 ORDER BY emp_no ASC;<br>
+<p align ="center">
+<img src="Results/code1.png" alt="code1" height="200"/><br>
+</p>
 
 This gave us a table in which some employees who have held multiple titles appear more than once:<br>
 
@@ -40,6 +43,9 @@ title<br>
 INTO unique_titles<br>
 FROM retirement_titles<br>
 ORDER BY emp_no, to_date DESC;<br>
+<p align ="center">
+<img src="Results/code2.png" alt="code2" height="200"/><br>
+</p>
 
 This produced a table without duplicates:<br>
 
@@ -54,6 +60,9 @@ INTO retiring_titles<br>
 FROM unique_titles<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
+<p align ="center">
+<img src="Results/code3.png" alt="code3" height="200"/><br>
+</p>
 
 <p align ="center">
 <img src="Results/retiring_titles.png" alt="retiring_titles" width="300"/><br>
@@ -72,6 +81,9 @@ LEFT OUTER JOIN titles<br>
 ON employees.emp_no = titles.emp_no<br>
 WHERE (employees.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND (dept_employee.to_date = '9999-01-01')<br>
 ORDER BY emp_no ASC;<br>
+<p align ="center">
+<img src="Results/code4.png" alt="code4" height="200"/><br>
+</p>
 
 This produced a table of employees eligible for the program:<br>
 
@@ -96,6 +108,9 @@ LEFT OUTER JOIN titles<br>
 ON employees.emp_no = titles.emp_no<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
+<p align ="center">
+<img src="Results/code5.png" alt="code5" height="200"/><br>
+</p>
 
 <p align ="center">
 <img src="Results/total_titles.png" alt="total_titles" width="300"/><br>
@@ -111,6 +126,9 @@ INTO mentorship_titles<br>
 FROM mentorship_eligibility<br>
 GROUP BY title<br>
 ORDER BY count DESC;<br>
+<p align ="center">
+<img src="Results/code6.png" alt="code6" height="200"/><br>
+</p>
 
 <p align ="center">
 <img src="Results/mentorship_titles.png" alt="mentorship_titles" width="300"/><br>
